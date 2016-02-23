@@ -8,14 +8,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var keypress = require('keypress');
 
-var r = new Rogue.Room(20, 10, 0, 0);
-var p = new Rogue.Player(5, 5);
-var d = new Rogue.Dungeon(p, [r]);
-var h = new Rogue.HUD(p); //@TODO this should probably just happen in game
+var r1 = new Rogue.Room(20, 10, 0, 0);
+var r2 = new Rogue.Room(20, 10, 30, 0);
 
-var g = new Rogue.Game(d, p, h);
+var player = new Rogue.Player(5, 5);
+var dungeon = new Rogue.Dungeon(player, [r1, r2]);
+var hud = new Rogue.HUD(player); //@TODO this should probably just happen in game
 
-g.start();
+dungeon.addConnection(r1, r2);
+
+var game = new Rogue.Game(dungeon, player, hud);
+
+game.start();
 
 // make `process.stdin` begin emitting "keypress" events
 keypress(process.stdin);
@@ -29,18 +33,18 @@ process.stdin.on('keypress', function (ch, key) {
 	}
 
 	if (key && key.name == 'up') {
-		g.moveUp();
+		game.moveUp();
 	}
 
 	if (key && key.name == 'down') {
-		g.moveDown();
+		game.moveDown();
 	}
 
 	if (key && key.name == 'left') {
-		g.moveLeft();
+		game.moveLeft();
 	}
 
 	if (key && key.name == 'right') {
-		g.moveRight();
+		game.moveRight();
 	}
 });
