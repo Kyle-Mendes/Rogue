@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel app.js --out-file build.js",
-    "watch": "babel app.js --out-file build.js --watch"
+    "watch": "babel app.js --out-file build.js --watch",
+    "run": "npm run build && node build.js"
   },
   "author": "",
   "license": "ISC",
