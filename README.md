@@ -1,6 +1,8 @@
 # Rogue Term
 This project is a super simple framework for developing terminal based Rogue-like games using Node.js.
 
+<img src="./assets/sample.png" />
+
 # Getting started
 Right now, this package isn't on NPM.  But you can clone this repository and run `npm link` to get a symlink to this package.
 
