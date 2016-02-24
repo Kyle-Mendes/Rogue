@@ -9,8 +9,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var keypress = require('keypress');
 
 var r1 = new Rogue.Room(20, 10, 0, 0);
-var r2 = new Rogue.Room(20, 10, 30, 0);
-var r3 = new Rogue.Room(50, 20, 10, 25);
+var r2 = new Rogue.Room(50, 15, 30, 0);
+var r3 = new Rogue.Room(80, 40, 10, 20);
 
 var player = new Rogue.Player(5, 5);
 var dungeon = new Rogue.Dungeon(player, [r1, r2, r3]);
@@ -19,7 +19,7 @@ var hud = new Rogue.HUD(player); //@TODO this should probably just happen in gam
 dungeon.addConnection(r1, r2);
 dungeon.addConnection(r2, r3);
 
-var game = new Rogue.Game(dungeon, player, hud);
+var game = new Rogue.Game(dungeon, player, hud, true);
 
 game.start();
 
