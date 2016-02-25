@@ -18,6 +18,7 @@ If you just want to see it in action, look in the examples directory:
 1. Run `npm build` and `npm run run` in `examples/simple` to see it in action!
 
 # Roadmap
-1. Add the ability to have complex connections between rooms (right angles).  Right now, they can only be straight lines
-2. Add a viewport, so the map can be very large, but only the values in view are rendered to the screen
-3. Add the ability to link dungeons together.  This would act like floors for deep dungeon traversal.
+
+- [ ] Add the ability to have complex connections between rooms (right angles).  Right now, they can only be straight lines
+- [x] ~~Add a viewport, so the map can be very large, but only the values in view are rendered to the screen~~
+- [ ] Add the ability to link dungeons together.  This would act like floors for deep dungeon traversal.
