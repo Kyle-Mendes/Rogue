@@ -1,0 +1,11 @@
+./lib
+!./dist
+
+.idea
+.DS_Store
+
+npm-debug.log
+
+node_modules
+
+tags

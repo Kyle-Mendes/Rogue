@@ -1,17 +1,17 @@
 {
-  "name": "rogue",
-  "version": "1.0.0",
-  "description": "",
+  "name": "rogue-term",
+  "version": "0.0.1",
+  "description": "A simple Node framework for making Roguelike games for the terminal.",
   "main": "dist/Rogue.js",
   "scripts": {
-    "prebuild": "npm run build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel lib --out-dir dist",
     "watch": "babel lib --out-dir dist --watch",
     "run": "node dist/app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Kyle Mendes <pink401k@gmail.com> (http://kyle.pink/)",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.5.1",
