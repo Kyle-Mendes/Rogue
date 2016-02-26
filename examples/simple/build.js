@@ -17,6 +17,10 @@ var player = new Rogue.Player(5, 5);
 var dungeon = new Rogue.Dungeon(player, [r1, r2, r3, r4]);
 var hud = new Rogue.HUD(player); //@TODO this should probably just happen in game
 
+// The dungeon viewport size can be overwritten.
+// dungeon.viewportWidth = 120;
+// dungeon.viewportHeight = 30;
+
 dungeon.addConnection(r1, r2);
 dungeon.addConnection(r1, r3);
 dungeon.addConnection(r2, r4);
