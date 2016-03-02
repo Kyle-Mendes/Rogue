@@ -9,7 +9,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var keypress = require('keypress');
 
 var r1 = new Rogue.Room(20, 10, 0, 0);
-var r2 = new Rogue.Room(20, 10, 25, 7);
+var r2 = new Rogue.Room(20, 10, 25, 10);
 var r3 = new Rogue.Room(10, 15, 5, 20);
 var r4 = new Rogue.Room(30, 15, 20, 25);
 
@@ -18,11 +18,11 @@ var dungeon = new Rogue.Dungeon(player, [r1, r2, r3, r4]);
 var hud = new Rogue.HUD(player); //@TODO this should probably just happen in game
 
 // The dungeon viewport size can be overwritten.
-// dungeon.viewportWidth = 120;
-// dungeon.viewportHeight = 30;
+dungeon.viewportWidth = 100;
+dungeon.viewportHeight = 30;
 
-dungeon.addConnection(r1, r2);
-dungeon.addConnection(r1, r3);
+dungeon.addConnection(r1, r2, 2, -2);
+dungeon.addConnection(r1, r3, -10);
 dungeon.addConnection(r2, r4);
 dungeon.addConnection(r3, r4, 0, 5); // offsetting the corridor by 5 cells down
 
