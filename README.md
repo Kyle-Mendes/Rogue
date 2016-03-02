@@ -19,6 +19,6 @@ If you just want to see it in action, look in the examples directory:
 
 # Roadmap
 
-- [ ] Add the ability to have complex connections between rooms (right angles).  Right now, they can only be straight lines
+- [x] Add the ability to have complex connections between rooms (right angles).  Right now, they can only be straight lines
 - [x] ~~Add a viewport, so the map can be very large, but only the values in view are rendered to the screen~~
 - [ ] Add the ability to link dungeons together.  This would act like floors for deep dungeon traversal.
